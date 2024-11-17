@@ -1,10 +1,8 @@
 #include<iostream>
 using namespace std;
 int main(){
-    cout <<"hello World\n";
-    int x = 100;
-    char y = 'S';
-    double z = 05.75;
-    cout << x <<"\n" <<y <<endl <<" " <<z; //need print space by blank quotation 
+    int a; //initialize data type and declare variable
+    cin >> a; //scan form input.txt file
+    cout << a <<endl;//print it into output.txt file
     return 0;
 }
