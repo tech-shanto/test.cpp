@@ -1,5 +1,4 @@
-#include<iostream>
-#include<iomanip>//input output manipulation
+#include<bits/stdc++.h>// all header file included.
 using namespace std;
 int main(){
     double d = 20.75756;
