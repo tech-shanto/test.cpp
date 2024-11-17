@@ -2,9 +2,9 @@
 using namespace std;
 int main(){
     int eof;
-    while (cin >> eof)
+    while (cin >> eof)//while loop
     {
-        cout << eof << endl;
+        cout << eof << endl;//end of file input system 
     }
     
 
