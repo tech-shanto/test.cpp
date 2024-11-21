@@ -21,7 +21,7 @@ int main()
     vector<int> array = sort_it(N);
     for (int i = 0; i < N; i++)
     {
-        cout << array[i];
+        cout << array[i]<< " ";
     }
     cout << endl;
     return 0;
