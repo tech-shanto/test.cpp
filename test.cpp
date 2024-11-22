@@ -1,28 +1,28 @@
-#include <bits/stdc++.h> // all header files included.
+#include <bits/stdc++.h>
 using namespace std;
 
-vector<int> sort_it(int N)
-{
-    vector<int> A(N);
-    for (int i = 0; i < N; i++)
-    {
+
+int* sort_it(int x) {
+    int* A = new int[x];
+    for (int i = 0; i < x; i++) {
         cin >> A[i];
     }
-    sort(A.begin(), A.end(), greater<int>());
+    sort(A, A + x, greater<int>());
     return A;
 }
 
-int main()
-{
-
-    
+int main() {
     int N;
     cin >> N;
-    vector<int> array = sort_it(N);
-    for (int i = 0; i < N; i++)
-    {
-        cout << array[i]<< " ";
+    
+    int* A = sort_it(N);
+
+    for (int i = 0; i < N; i++) {
+        cout << A[i] << " ";
     }
     cout << endl;
+    
+    delete[] A;
+
     return 0;
 }
