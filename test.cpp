@@ -3,19 +3,32 @@ using namespace std;
 
 int main()
 {
-    string S;
-    getline(cin, S);
+    int N;
+    cin >> N;
 
-    stringstream ss(S);
-    string word;
-    while (ss>>word)
+    vector<tuple<string, int, char, int>> students(N);
+
+    for (int i = 0; i < N; ++i)
     {
-        if(word == "Jessica"){
-            cout << "Yes"<<endl;
-            return 0;
-        }
+        string nm;
+        int cls, id;
+        char s;
+        cin >> nm >> cls >> s >> id;
+        students[i] = make_tuple(nm, cls, s, id);
     }
-    cout<<"NO"<<endl;
+    for (int i = 0; i < N / 2; ++i)
+    {
+        char temp = get<2>(students[i]);
+        get<2>(students[i]) = get<2>(students[N - i - 1]);
+        get<2>(students[N - i - 1]) = temp;
+    }
+    for (int i = 0; i < N; ++i)
+    {
+        cout << get<0>(students[i]) << " "
+             << get<1>(students[i]) << " "
+             << get<2>(students[i]) << " "
+             << get<3>(students[i]) << endl;
+    }
 
     return 0;
 }
