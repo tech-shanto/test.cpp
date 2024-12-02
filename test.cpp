@@ -3,21 +3,19 @@ using namespace std;
 
 int main()
 {
-    int T;
-    cin >> T;
+    string S;
+    getline(cin, S);
 
-    while (T--)
+    stringstream ss(S);
+    string word;
+    while (ss>>word)
     {
-        string S, X;
-        cin >> S >> X;
-        size_t pos = 0;
-        while ((pos = S.find(X, pos)) != string::npos)
-        {
-            S.replace(pos, X.length(), "#");
-            pos += 1;
+        if(word == "Jessica"){
+            cout << "Yes"<<endl;
+            return 0;
         }
-        cout << S << endl;
     }
+    cout<<"NO"<<endl;
 
     return 0;
 }
